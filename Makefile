@@ -58,9 +58,11 @@ debug:
 	#Example passing ENV to python
 	#python3 scripts/example_python_env.py
 
-.PHONY: test
-test:
-	echo "Running tests...."
+.PHONY: lint
+lint:
+	echo "Running linters...."
+	cfn-lint --template ./template.yaml 
+	#aws cloudformation validate-template --template-body file://$(pwd)/template.yaml
 
 .PHONY: validate
 validate:

@@ -12,11 +12,12 @@ phases:
       - python -m venv venv
       - . venv/bin/activate
       - pip install -r src/requirements.txt
+      - pip install -r dev-requirements.txt
   build:
     commands:
       - echo "---- Build Phase ----"
       - make debug
-      - make test
+      - make lint
 
 artifacts:
   discard-paths: yes
