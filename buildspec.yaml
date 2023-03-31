@@ -14,7 +14,7 @@ phases:
       - pip install -r src/requirements.txt
   build:
     commands:
-      - echo "--- Build Phase ---"
+      - echo "---- Build Phase ----"
       - make debug
 
 artifacts:
