@@ -58,6 +58,10 @@ debug:
 	#Example passing ENV to python
 	#python3 scripts/example_python_env.py
 
+.PHONY: test
+test:
+	echo "Running tests...."
+
 .PHONY: validate
 validate:
 	bqd validate ./queries/kaos-data-plane-001/huntsmen_views/TI:th_adversary:dwell_sigsci.yaml

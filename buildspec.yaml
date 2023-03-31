@@ -16,6 +16,7 @@ phases:
     commands:
       - echo "---- Build Phase ----"
       - make debug
+      - make test
 
 artifacts:
   discard-paths: yes

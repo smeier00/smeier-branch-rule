@@ -1,0 +1,18 @@
+--- 
+AWSTemplateFormatVersion: '2010-09-09' 
+Description: Create an S3 bucket using CloudFormation 
+Parameters: 
+  BucketName: 
+    Type: String 
+    Description: Name of the S3 bucket 
+    Default: kaos-codepipeline-dev-8888z3
+Resources: 
+  S3Bucket: 
+    Type: AWS::S3::Bucket 
+    Properties: 
+      BucketName: !Ref BucketName 
+Outputs: 
+  BucketName: 
+    Description: Name of the S3 Bucket 
+    Value: !Ref S3Bucket 
+
