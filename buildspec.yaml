@@ -1,0 +1,24 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      python: 3.9
+    commands:
+      - echo "--- Install Phase ---"
+      - apt-get install zip -qq
+  pre_build:
+    commands:
+      - echo "--- Pre-build Phase ---"
+      - python -m venv venv
+      - . venv/bin/activate
+      - pip install -r src/requirements.txt
+  build:
+    commands:
+      - echo "--- Build Phase ---"
+      - make debug
+
+artifacts:
+  discard-paths: yes
+  files:
+    - config.yaml
+    - template.yaml
