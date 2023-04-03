@@ -24,7 +24,8 @@ phases:
       - if [ "$BRANCH_NAME" = "main" ]; then export DEPLOY_ACCOUNT_ID=123456789012; else export DEPLOY_ACCOUNT_ID=234567890123; fi
       -  echo "Assuming role in target account $DEPLOY_ACCOUNT_ID "
       -  echo "BRANCH is $BRANCH_NAME"
-      - echo "Deploying the CloudFormation stack"
+      -  echo "Deploying the CloudFormation stack"
+      - bash ./env.sh
 
 
 

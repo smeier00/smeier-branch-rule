@@ -62,6 +62,7 @@ debug:
 lint:
 	echo "Running linters...."
 	cfn-lint --template ./template.yaml 
+	echo "BRANCH: $(BRANCH)"
 	#aws cloudformation validate-template --template-body file://$(pwd)/template.yaml
 
 .PHONY: validate
