@@ -25,7 +25,8 @@ phases:
       -  echo "Assuming role in target account $DEPLOY_ACCOUNT_ID "
       -  echo "BRANCH is $BRANCH_NAME"
       -  echo "Deploying the CloudFormation stack"
-      - bash ./env.sh
+      - echo "ENV Vars"
+      - env
 
 
 
