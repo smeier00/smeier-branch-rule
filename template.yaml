@@ -5,7 +5,6 @@ Parameters:
   BucketName: 
     Type: String 
     Description: Name of the S3 bucket 
-    Default: kaos-codepipeline-dev-8888z3
 Resources: 
   S3Bucket: 
     Type: AWS::S3::Bucket 

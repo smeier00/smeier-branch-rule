@@ -21,9 +21,9 @@ phases:
       - make lint
   post_build:
     commands:
-      - if [ "$BRANCH_NAME" = "main" ]; then export DEPLOY_ACCOUNT_ID=123456789012; else export DEPLOY_ACCOUNT_ID=234567890123; fi
+      - if [ "$GIT_BRANCH" = "main" ]; then export DEPLOY_ACCOUNT_ID=123456789012; else export DEPLOY_ACCOUNT_ID=234567890123; fi
       -  echo "Assuming role in target account $DEPLOY_ACCOUNT_ID "
-      -  echo "BRANCH is $BRANCH_NAME"
+      -  echo "BRANCH is $GIT_BRANCH"
       -  echo "Deploying the CloudFormation stack"
       - echo "ENV Vars"
       - env
@@ -46,3 +46,4 @@ artifacts:
   files:
     - config.yaml
     - template.yaml
+    - template-configuration.yaml
