@@ -21,14 +21,8 @@ phases:
       - make lint
   post_build:
     commands:
-      - if [ "$BRANCH_NAME" = "main" ]; then 
-      -  export DEPLOY_ACCOUNT_ID=123456789012 
-      -  export ENV="production" 
-      - else 
-      -   export DEPLOY_ACCOUNT_ID=234567890123 
-      -   export ENV="development"
-      - fi
-      -  echo "Assuming role in target account $DEPLOY_ACCOUNT_ID for environment $ENV"
+      - if [ "$BRANCH_NAME" = "main" ]; then export DEPLOY_ACCOUNT_ID=123456789012; else export DEPLOY_ACCOUNT_ID=234567890123; fi
+      -  echo "Assuming role in target account $DEPLOY_ACCOUNT_ID "
       - echo "Deploying the CloudFormation stack"
 
 
