@@ -5,13 +5,13 @@ phases:
       python: 3.11
     commands:
       - echo "--- Install Phase ---"
-      - apt-get install zip jq broken-ss  -qq
+      - apt-get install zip jq -qq
   pre_build:
     commands:
       - echo "--- Pre-build Phase ---"
       - python -m venv venv
       - . venv/bin/activate
-      - pip install -r src/requirements.txt
+      - pip4 install -r src/requirements.txt
       - pip install -r dev-requirements.txt
   build:
     commands:
