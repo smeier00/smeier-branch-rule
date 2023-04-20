@@ -5,8 +5,7 @@ phases:
       python: 3.10
     commands:
       - echo "--- Install Phase ---"
-      - apt-get install zip -qq
-      - apt-get install jq -qq
+      - apt-get install zip jq  -qq
   pre_build:
     commands:
       - echo "--- Pre-build Phase ---"
