@@ -1,5 +1,2 @@
 # sample project
-
-change...
-
-
+foo bar baz
