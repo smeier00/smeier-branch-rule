@@ -18,6 +18,7 @@ phases:
       - echo "---- Build Phase ----"
       - make debug
       - make lint
+      - env
   post_build:
     commands:
       - if [ "$GIT_BRANCH" = "main" ]; then export DEPLOY_ACCOUNT_ID=123456789012; else export DEPLOY_ACCOUNT_ID=234567890123; fi
