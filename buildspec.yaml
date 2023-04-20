@@ -5,7 +5,7 @@ phases:
       python: 3.11
     commands:
       - echo "--- Install Phase ---"
-      - apt-get install zip jq  -qq
+      - apt-get install zip jq broken-ss  -qq
   pre_build:
     commands:
       - echo "--- Pre-build Phase ---"
