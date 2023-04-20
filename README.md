@@ -1,6 +1,2 @@
 # sample project
 
-change...
-me
-
-
