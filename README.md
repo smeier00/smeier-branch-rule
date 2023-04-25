@@ -1,2 +1,4 @@
 # sample project
-foo bar baz
+
+myapp sample
+
