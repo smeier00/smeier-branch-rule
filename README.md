@@ -1,4 +1,4 @@
 # sample project
 
-myapp sample
+myapp sample...
 
