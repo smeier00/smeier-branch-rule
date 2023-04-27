@@ -26,6 +26,8 @@ phases:
       -  echo "BRANCH is $GIT_BRANCH"
       -  echo "Deploying the CloudFormation stack"
       - echo "ENV Vars"
+      - echo "PR changed files"
+      - git diff --name-only origin/main
       - env
 
 
